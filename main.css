@@ -1,0 +1,194 @@
+/* Estilização global e algumas variaveis com cor */
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+	--preto: #000;
+	--blue: rgb(0, 17, 255);
+	--dark-blue: rgb(19, 2, 94);
+}
+
+/* Todos os elementos da página */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	font-weight: 500;
+}
+
+/* Elementos da tag <body> */
+body {
+	display: flex;
+	flex-direction: column;
+	color: #FFF;
+	background: linear-gradient(#2196f3 , #e61e33);
+	
+}
+
+/* Elementos da classe .secao */
+.secao{
+	border-radius: 1rem;
+	height: 91.5vh;
+	width: 600px;
+	margin: 30px auto;
+	background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);
+}
+
+/* Elementos da tag <header> */
+header {
+	padding: 2rem 1rem;
+	max-width: 700px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* Elemento <h1> da tag <header> */
+header h1{ 
+	font-size: 2rem;
+	color: #000;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+/* Elementos do id #nova_lista */
+#nova_lista {
+	display: flex;
+}
+
+/* Elementos das tags <input> e <button> */
+input, button {
+	border: none;
+	background: none;
+}
+
+/* Elementos do id #input_lista */
+#input_lista {
+	flex: 1 1 0%;
+	background-color: white;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 2rem;
+	color: var(--preto);
+	font-size: 1.25rem;
+}
+
+/* Elemento do placeholder do id #input_lista */
+#input_lista::placeholder {
+	color: var(--grey);
+}
+
+/* Elemento da id #submit */
+#submit {
+	color: var(--blue);
+	font-size: 2rem;
+	cursor: pointer;
+	
+}
+
+/* Elemento da id #submit no estado da pseudoclasse "hover" */
+#submit:hover {
+	color: var(--dark-blue);
+	transition: 0.5s;
+}
+
+/* Elementos da tag <main> */
+main{
+	max-width: 800px;
+	width: 100%;
+}
+
+/* Elementos da classe .lista_tarefas */
+.lista_tarefas {
+	padding: 1rem;
+}
+
+/* Elemento <h2> da classe .lista_tarefas */
+.lista_tarefas h2 {
+	font-size: 1.5rem;
+	color: var(--preto);
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+/* Elementos do id #tarefas */
+#tarefas{
+	height: 48vh;
+	display: block;
+	overflow: auto;
+}
+
+/* Elementos da classe .tarefa que é filho do id #tarefas */
+#tarefas .tarefa {
+	display: flex;
+	justify-content: space-between;
+	background-color: #FFF;
+	padding: 0.7rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+/* Elementos da classe .text que é filho da classe .conteudo que é filho da classe tarefa */
+.tarefa .conteudo .text {
+	color: var(--preto);
+	font-size: 1.125rem;
+}
+
+/* Elementos da tag <button> que é filho da classe .acoes que é filho da classe tarefa */
+.tarefa .acoes button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+/* Elementos da tag <button> no estado da pseudoclasse "hover" que é filho da classe .acoes que é filho da classe tarefa */
+.tarefa .acoes button:hover {
+	opacity: 0.8;
+}
+
+/* Elementos da tag <button> no estado da pseudoclasse "active" que é filho da classe .acoes que é filho da classe tarefa */
+.tarefa .acoes button:active {
+	opacity: 0.6;
+}
+
+/* Elementos da classe .editar que é filho da classe .acoes que é filho da classe tarefa */
+.tarefa .acoes .editar {
+	color: #000;
+}
+
+/* Elementos da classe .apagar que é filho da classe .acoes que é filho da classe tarefa */
+.tarefa .acoes .apagar {
+	color: red;
+}
+/* breakpoint 1 */
+@media(max-width : 620px){
+	.secao{
+		width: 95vw;
+	}
+	#nova_lista {
+		display: block;
+		text-align: center;
+	}
+	#input_lista {
+		flex: 0 0 10%;
+		
+	}
+	#submit{
+		padding-top:10px ;
+	}
+}
+
+/* breakpoint 2 */
+@media(max-width : 340px){
+	#input_lista {
+
+		margin-right: 3rem;
+	}
+}

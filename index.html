@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<!-- Metadados -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" conteudo="IE=edge">
+	<meta name="viewport" conteudo="width=device-width, initial-scale=1.0">
+
+	<!-- Título (aba) -->
+	<title>Lista de tarefas</title>
+
+	<!-- font awesome  -->
+	<script src="https://kit.fontawesome.com/8299cef505.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="main.css" />
+
+	<!-- Ícone (aba) -->
+	<link rel="shortcut icon" href="lista.png" type="image/x-icon">
+</head>
+<body>
+
+	<!-- "agrupamento" -->
+	<fieldset class="secao">
+		<header>
+			<!-- Título (corpo) -->
+			<h1>Lista de tarefas</h1>
+			<form id="nova_lista">
+
+				<!-- Campo de texto para inserir nova tarefa-->
+				<input 
+					type="text" 
+					name="input_lista" 
+					id="input_lista"
+					placeholder="Adicione uma nova tarefa " />
+
+					<!-- Botão de enviar -->
+					<button	id="enviar" 
+					type="submit"
+					value="adicionar">
+
+					<!-- ícone do botão enviar -->
+					<i id="submit" 
+					class="fas fa-plus-square">
+					</i>
+				</button>
+			</form>
+		</header>
+		<main>
+			<!-- Seção da lista de tarefas criadas -->
+			<section class="lista_tarefas">
+
+				<!-- Título da seção da lista de tarefas -->
+				<h2>Lista:</h2>
+
+				<!-- Seção que irá ficar a lista de tarefas e será usado no "js" para adicionar as tarefas a lista -->
+				<div id="tarefas">
+
+				</div>
+			</section>
+		</main>
+</fieldset>
+	<!-- Javascript -->
+	<script src="main.js"></script>
+</body>
+</html>
